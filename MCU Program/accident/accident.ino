@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 #include <Wire.h>
-
+int state = 0;
 int mappedAcX = 0;
 int mappedAcY = 0;
 int mappedAcZ = 0;
@@ -27,7 +27,7 @@ bool RightIRtriggered = false;
 // GSM
 SoftwareSerial SIM900A(5, 17); // gsm module connected here
 String GSMmessage = "Accident!";
-String phoneNumber = "+8801886772094";
+String phoneNumber = "+8801716909892";
 
 void setup() {
   Serial.begin(9600);
@@ -100,7 +100,7 @@ void readGyroValue(){
 void accident(){
   if(mappedAcX >= 60 or mappedAcX <= -60){
     // makeCall();
-    // sendMessage();
+    sendMessage();
   }else if(mappedAcY >= 60 or mappedAcY <= -60){
     // sendMessage();
     // makeCall();
