@@ -1,10 +1,4 @@
-/*
-****************
-Linuxhint.com
-****************
-Linuxhint.com 90 09 09 13
-****************
-*/
+
 #include <SPI.h>
 #include <MFRC522.h>
 #define SS_PIN  21  /*Slave Select Pin*/
@@ -12,6 +6,8 @@ Linuxhint.com 90 09 09 13
 #define Relay_Pin   12  /*Pin 8 for LED*/
 MFRC522 mfrc522(SS_PIN, RST_PIN); 
 int relayCondition = 1;
+byte lock = 0;
+String UID = "A3 90 15 FF";
  /*Create MFRC522 initialized*/
 void setup()
 {
@@ -49,27 +45,21 @@ void loop()
   Serial.println();
   Serial.print("Message : ");
   content.toUpperCase();
-  if (content.substring(1) == "A3 90 15 FF") /*UID for the Card/Tag we want to give access Replace with your card UID*/
+  if (content.substring(1) == UID && lock == 0) /*UID for the Card/Tag we want to give access Replace with your card UID*/
   {
-    Serial.println("Authorized access");  /*Print message if UID match with the 
-    database*/
-    // if()
-    digitalWrite(Relay_Pin, HIGH);
-    // if(relayCondition == 0){
-    //   relayCondition = 1;
-    // }else{
-    //   relayCondition = 0;
-    // }
-    
-  }
- else   {
-    Serial.println(" Access denied"); /*If UID do not match print message*/
-    digitalWrite(Relay_Pin, LO);
-  }
+    Serial.println("locked");  
 
-  // if(relayCondition == 1){
-  //   digitalWrite(Relay_Pin, LOW);
-  // }else{
-  //   digitalWrite(Relay_Pin, HIGH);
-  // }
+    digitalWrite(Relay_Pin, LOW);
+    lock = 1;
+    delay(1000);
+  }
+  else if(content.substring(1) == UID && lock == 1){
+    Serial.println("open");  
+    digitalWrite(Relay_Pin, HIGH);
+    lock = 0;
+    delay(1000);
+  }
+  else   {
+    Serial.println(" Access denied"); /*If UID do not match print message*/
+  }
 }

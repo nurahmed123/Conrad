@@ -1,8 +1,11 @@
 // Define pins
 const int trigPin = 8;
 const int echoPin = 9;
+const int ldrPin = 7;
 const int long_light = 5;
 const int short_light = 6;
+const int nightValue = 40;
+int ldrValue;
 
 // Variables for the duration of the pulse and the distance
 long duration;
@@ -20,7 +23,9 @@ void setup() {
   pinMode(short_light, OUTPUT);
 }
 
-void ultraDistance(){
+int ultraDistance(){
+  // LDR read 
+  ldrValue = analogRead(ldrPin);
   // Trigger the ultrasonic sensor
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
@@ -40,13 +45,13 @@ void ultraDistance(){
   Serial.println(" cm");
 
 
-  if(distance> safeDistance){
+  if(distance> safeDistance && ldrValue > nightValue){
     digitalWrite(short_light, HIGH);
     digitalWrite(long_light, LOW);
   }
   else{
-    digitalWrite(short_light, HIGH);
-    digitalWrite(long_light, LOW);
+    digitalWrite(short_light, LOW);
+    digitalWrite(long_light, HIGH);
   }
 
   // Wait for a short time before taking the next measurement
