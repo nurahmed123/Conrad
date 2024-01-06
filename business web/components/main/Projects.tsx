@@ -10,9 +10,8 @@ const Projects = () => {
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         Our products
       </h1>
-      <div className="h-full w-full flex flex-row gap-10 px-10 justify-center z-[20]">
-        <ProjectCard/>
-        
+      <div className="h-full flex flex-col gap-10 px-10 justify-center z-[20] w-[90%]">
+        <ProjectCard />
       </div>
     </div>
   );
