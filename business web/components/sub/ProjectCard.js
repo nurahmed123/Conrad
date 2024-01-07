@@ -17,7 +17,9 @@ const ProjectCard = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [productImage, setProductImage] = useState({
     modelURL: "",
+    modelImageUrl: "",
     modelTitle: "",
+    modelToggle: "",
   });
 
   return (
@@ -29,6 +31,7 @@ const ProjectCard = () => {
           console.log("Script has loaded");
         }}
       />
+
       <Modal
         backdrop="opaque"
         isOpen={isOpen}
@@ -44,22 +47,35 @@ const ProjectCard = () => {
               <h1 className="text-gray-200 text-xl">
                 {productImage.modelTitle}
               </h1>
-              <model-viewer
-                src={`/formatted/${productImage.modelURL}`}
-                style={{ width: "45rem", height: "45rem" }}
-                ar-modes="webxr scene-viewer quick-look"
-                camera-controls
-                tone-mapping="commerce"
-                poster="poster.webp"
-                shadow-intensity="1"
-                environment-image="legacy"
-              ></model-viewer>
+
+              {productImage.modelToggle === "img" ?
+                <Image src={`/${productImage.modelImageUrl}`}
+                  style={{ width: "45rem", height: "45rem" }}
+                  alt="this is a img"
+                  width={450}
+                  height={300}
+                />
+                :
+                <model-viewer
+                  src={`/formatted/${productImage.modelURL}`}
+                  style={{ width: "45rem", height: "45rem" }}
+                  ar-modes="webxr scene-viewer quick-look"
+                  camera-controls
+                  tone-mapping="commerce"
+                  poster="poster.webp"
+                  shadow-intensity="1"
+                  environment-image="legacy"
+                >
+                </model-viewer>
+              }
+
             </>
           )}
         </ModalContent>
       </Modal>
 
-      <div className="grid gap-4 w-4/5 welcome-box mx-auto">
+      <div className="grid gap-4 w-4/5 welcome-box mx-auto" data-aos="fade-up"
+     data-aos-duration="3000">
         <div className="flex justify-center">
           <video
             autoPlay
@@ -70,39 +86,263 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video>
         </div>
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 gap-4" data-aos="fade-up"
+     data-aos-duration="3000">
+
+
           <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelURL: "circuitAsPart.glb",
-                modelTitle: "circuitAsPart",
+                modelImageUrl: "Automotive Air bag sensor iso.JPG",
+                modelTitle: "Automotive Air bag sensor",
+                modelToggle: "img"
               })
             }
           >
-            <model-viewer
+            <Image
               style={{ height: "15rem" }}
-              src={`/formatted/circuitAsPart.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-            ></model-viewer>
+              width={350}
+              height={250}
+              src={`/Automotive Air bag sensor iso.JPG`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
           </div>
 
           <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelURL: "part1BaseWithPorts.glb",
-                modelTitle: "part1BaseWithPorts",
+                modelImageUrl: "Main Board iso.JPG",
+                modelTitle: "Main board",
+                modelToggle: "img"
+              })
+            }
+          >
+            <Image
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/Main Board iso.JPG`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
+
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelImageUrl: "display.jpg",
+                modelTitle: "Display",
+                modelToggle: "img"
+              })
+            }
+          >
+            <Image
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/display.jpg`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
+
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelImageUrl: "Radar Sensor iso.JPG",
+                modelTitle: "rader sensor",
+                modelToggle: "img"
+              })
+            }
+          >
+            <Image
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/Radar Sensor iso.JPG`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
+
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelImageUrl: "Speedometer iso copy.JPG",
+                modelTitle: "Speedometer",
+                modelToggle: "img"
+              })
+            }
+          >
+            <Image
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/Speedometer iso copy.JPG`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
+        </div>
+      </div>
+
+      {/* TODO: long product */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
+     data-aos-duration="3000">
+        <div className="grid gap-4">
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "automotive air bag sensor a.glb",
+                modelTitle: "Automotive air bag sensor",
               })
             }
           >
             <model-viewer
-              style={{ height: "15rem" }}
+              style={{ height: "40rem" }}
+              src={`/formatted/automotive air bag sensor a.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "hcsr04 ultrasonic sensor.glb",
+                modelTitle: "hcsr04 ultrasonic sensor",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
+              src={`/formatted/hcsr04 ultrasonic sensor.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "radar sensor.glb",
+                modelTitle: "Radar sensor",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
+              src={`/formatted/radar sensor.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+        </div>
+        <div className="grid gap-4">
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "rain sensor.glb",
+                modelTitle: "Rain sensor",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
+              src={`/formatted/rain sensor.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "speedometer.glb",
+                modelTitle: "Speedometer",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "30rem" }}
+              src={`/formatted/speedometer.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "web camera.glb",
+                modelTitle: "web camera",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
+              src={`/formatted/web camera.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div>
+        </div>
+        <div className="grid gap-4">
+          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "part1BaseWithPorts.glb",
+                modelTitle: "Main board",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
               src={`/formatted/part1BaseWithPorts.glb`}
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
@@ -110,31 +350,12 @@ const ProjectCard = () => {
               poster="poster.webp"
               shadow-intensity="1"
               environment-image="legacy"
+              auto-rotate
             ></model-viewer>
           </div>
 
           <div
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "part2UpperPrt.glb",
-                modelTitle: "Upper Part",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "15rem" }}
-              src={`/formatted/part2UpperPrt.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-            ></model-viewer>
-          </div>
-
-          <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
@@ -144,7 +365,7 @@ const ProjectCard = () => {
             }
           >
             <model-viewer
-              style={{ height: "15rem" }}
+              style={{ height: "25rem" }}
               src={`/formatted/pocketSensor.glb`}
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
@@ -152,53 +373,6 @@ const ProjectCard = () => {
               poster="poster.webp"
               shadow-intensity="1"
               environment-image="legacy"
-            ></model-viewer>
-          </div>
-
-          <div
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "15rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-            ></model-viewer>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="grid gap-4">
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "40rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
               auto-rotate
             ></model-viewer>
           </div>
@@ -208,177 +382,14 @@ const ProjectCard = () => {
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "30rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
-              })
-            }
-          >
-            <model-viewer
-              style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
-              ar-modes="webxr scene-viewer quick-look"
-              camera-controls
-              tone-mapping="commerce"
-              poster="poster.webp"
-              shadow-intensity="1"
-              environment-image="legacy"
-              auto-rotate
-            ></model-viewer>
-          </div>
-
-          <div
-            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
-            onClick={onOpen}
-            onMouseEnter={() =>
-              setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
+                modelURL: "part2UpperPrt.glb",
+                modelTitle: "Upper part",
               })
             }
           >
             <model-viewer
               style={{ height: "35rem" }}
-              src={`/formatted/display.glb`}
+              src={`/formatted/part2UpperPrt.glb`}
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="commerce"
@@ -418,14 +429,14 @@ const ProjectCard = () => {
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
+                modelURL: "circuitAsPart.glb",
+                modelTitle: "Circuit part",
               })
             }
           >
             <model-viewer
               style={{ height: "40rem" }}
-              src={`/formatted/display.glb`}
+              src={`/formatted/circuitAsPart.glb`}
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="commerce"

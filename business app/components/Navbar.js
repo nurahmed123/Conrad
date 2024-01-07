@@ -8,8 +8,8 @@ const Navbar = () => {
         <nav className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Boring team</span>
+                    <img src="/logo.png" className="h-8" alt="Flowbite Logo" />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">EXOMAX</span>
                 </Link>
                 <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button type="button" className="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
@@ -28,7 +28,7 @@ const Navbar = () => {
                             <Link href="/pricing" className="block py-2 px-3 text-gray-900 rounded hover:bg-cyan-100md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Upgrade</Link>
                         </li>
                         <li>
-                            <Link href="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-cyan-100md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
+                            <Link href="/area" className="block py-2 px-3 text-gray-900 rounded hover:bg-cyan-100md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Area Select</Link>
                         </li>
                         <li>
                             <Link href="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-cyan-100md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</Link>
