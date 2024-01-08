@@ -82,7 +82,7 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video>
         </div>
-        <div className="grid grid-cols-5 gap-4" data-aos="fade-up"
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4" data-aos="fade-up"
           data-aos-duration="3000">
 
 
@@ -97,6 +97,7 @@ const ProjectCard = () => {
             }
           >
             <Image
+              alt="Air Bag Sensor Image"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -116,6 +117,7 @@ const ProjectCard = () => {
             }
           >
             <Image
+              alt="Main box"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -135,6 +137,7 @@ const ProjectCard = () => {
             }
           >
             <Image
+              alt="display"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -154,6 +157,7 @@ const ProjectCard = () => {
             }
           >
             <Image
+              alt="rader"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -173,6 +177,7 @@ const ProjectCard = () => {
             }
           >
             <Image
+              alt="speedometer"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -184,7 +189,7 @@ const ProjectCard = () => {
       </div>
 
       {/* TODO: long product */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
+      <div className="grid grid-cols-1 3xl:grid-cols-4 md:grid-cols-2 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
         data-aos-duration="3000">
         <div className="grid gap-4">
           <div
