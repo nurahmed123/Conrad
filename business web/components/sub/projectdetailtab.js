@@ -42,9 +42,9 @@ const projectdetailtab = () => {
             Smart Road Safety Beast emerges as the beacon of progress,
             offering a comprehensive, reliable partner for enhancing road
             safety infrastructure.`,
-            contantMode: "show"
         }
     )
+    const [outLookTrigger, setOutLookTrigger] = useState("show")
     const [what, setWhat] = useState(
         {
             showContent: `To reduce the energy we lose due to various accidents
@@ -103,6 +103,7 @@ const projectdetailtab = () => {
             contantMode: "show",
         }
     )
+    const [whatTrigger, setWhatTrigger] = useState("show")
     return (
         <>
             <section className="text-gray-400 body-font" id="project">
@@ -143,9 +144,9 @@ const projectdetailtab = () => {
                                     Out Look
                                 </h2>
                                 <p className="leading-relaxed text-lg " data-aos="fade-left">
-                                    {outLook.contantMode === "show" ? outLook.showContent : outLook.fullContentL}
+                                    {outLookTrigger === "show" ? outLook.showContent : outLook.fullContentL}
                                 </p>
-                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setoutLook({ contantMode: outLook.contantMode == "show" ? "full" : "show" })}>
+                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setOutLookTrigger(outLookTrigger === "show" ? "full" : "show")}>
                                     Learn More
                                     <svg
                                         fill="none"
@@ -182,9 +183,9 @@ const projectdetailtab = () => {
                                     What & Why
                                 </h2>
                                 <p className="leading-relaxed text-base" data-aos="fade-left">
-                                    {what.contantMode === "show" ? what.showContent : what.fullContentL}
+                                    {whatTrigger === "show" ? what.showContent : what.fullContentL}
                                 </p>
-                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setWhat({ contantMode: what.contantMode == "show" ? "full" : "show" })}>
+                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setWhatTrigger(whatTrigger === "show" ? "full" : "show")}>
                                     Learn More
                                     <svg
                                         fill="none"

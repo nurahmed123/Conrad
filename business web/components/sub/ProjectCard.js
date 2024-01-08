@@ -6,10 +6,6 @@ import React, { useState } from "react";
 import {
   Modal,
   ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
   useDisclosure,
 } from "@nextui-org/react";
 
@@ -75,7 +71,7 @@ const ProjectCard = () => {
       </Modal>
 
       <div className="grid gap-4 w-4/5 welcome-box mx-auto" data-aos="fade-up"
-     data-aos-duration="3000">
+        data-aos-duration="3000">
         <div className="flex justify-center">
           <video
             autoPlay
@@ -87,7 +83,7 @@ const ProjectCard = () => {
           </video>
         </div>
         <div className="grid grid-cols-5 gap-4" data-aos="fade-up"
-     data-aos-duration="3000">
+          data-aos-duration="3000">
 
 
           <div
@@ -189,7 +185,7 @@ const ProjectCard = () => {
 
       {/* TODO: long product */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
-     data-aos-duration="3000">
+        data-aos-duration="3000">
         <div className="grid gap-4">
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
