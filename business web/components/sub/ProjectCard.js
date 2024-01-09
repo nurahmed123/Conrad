@@ -85,7 +85,6 @@ const ProjectCard = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4" data-aos="fade-up"
           data-aos-duration="3000">
 
-
           <div
             onClick={onOpen}
             onMouseEnter={() =>
