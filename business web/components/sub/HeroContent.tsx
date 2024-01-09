@@ -10,7 +10,7 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-const HeroContent = () => {
+const  HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
@@ -37,7 +37,7 @@ const HeroContent = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               road safety beast{" "}
-            </span>
+            </span> 
             a complete solution of road accident
           </span>
         </motion.div>
@@ -46,12 +46,9 @@ const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          Introducing the Smart Road Safety Beast(SRSB), our mission is to drive
-          the rate of road accidents to zero. This innovative solution
-          transcends conventional safety systems, integrating fea...
+          Introducing the Smart Road Safety Beast(SRSB), our mission is to drive the rate of road accidents to zero. This innovative solution transcends conventional safety systems, integrating fea...
         </motion.p>
-        <motion.a
-          href="#project"
+        <motion.a href="#project"
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
         >
@@ -65,6 +62,7 @@ const HeroContent = () => {
       >
         <Image
           src="/mainIconsdark.svg"
+          // src="/henoImg.png"
           alt="work icons"
           height={650}
           width={650}

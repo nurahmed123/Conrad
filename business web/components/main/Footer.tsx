@@ -1,18 +1,22 @@
 import React from "react";
 import {
     RxDiscordLogo,
-    RxGithubLogo,
-    RxInstagramLogo,
-    RxTwitterLogo,
-    RxLinkedinLogo,
+    RxGithubLogo
 } from "react-icons/rx";
+// import {
+//     RxDiscordLogo,
+//     RxGithubLogo,
+//     RxInstagramLogo,
+//     RxTwitterLogo,
+//     RxLinkedinLogo,
+// } from "react-icons/rx";
 
 import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
 const Footer = () => {
     return (
-        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] " id="contact" data-aos="fade-up"
+        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] mt-[20rem]" id="contact" data-aos="fade-up"
         data-aos-duration="3000">
             <div className="w-full flex flex-col items-center justify-center m-auto">
                 <div className="w-full h-full flex flex-row items-center justify-around flex-wrap z-[20]">

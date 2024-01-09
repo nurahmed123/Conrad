@@ -1,15 +1,10 @@
 "use client";
 import Image from "next/image";
-// import React from "react";
 import Script from "next/script";
 import React, { useState } from "react";
 import {
   Modal,
   ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
   useDisclosure,
 } from "@nextui-org/react";
 
@@ -48,15 +43,14 @@ const ProjectCard = () => {
                 {productImage.modelTitle}
               </h1>
 
-              {productImage.modelToggle === "img" ? (
-                <Image
-                  src={`/${productImage.modelImageUrl}`}
+              {productImage.modelToggle === "img" ?
+                <Image src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
                   alt="this is a img"
                   width={450}
                   height={300}
                 />
-              ) : (
+                :
                 <model-viewer
                   src={`/formatted/${productImage.modelURL}`}
                   style={{ width: "45rem", height: "45rem" }}
@@ -66,18 +60,17 @@ const ProjectCard = () => {
                   poster="poster.webp"
                   shadow-intensity="1"
                   environment-image="legacy"
-                ></model-viewer>
-              )}
+                >
+                </model-viewer>
+              }
+
             </>
           )}
         </ModalContent>
       </Modal>
 
-      <div
-        className="grid gap-4 w-4/5 welcome-box mx-auto"
-        data-aos="fade-up"
-        data-aos-duration="3000"
-      >
+      <div className="grid gap-4 w-4/5 welcome-box mx-auto" data-aos="fade-up"
+        data-aos-duration="3000">
         <div className="flex justify-center">
           <video
             autoPlay
@@ -88,22 +81,21 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video>
         </div>
-        <div
-          className="grid grid-cols-5 gap-4"
-          data-aos="fade-up"
-          data-aos-duration="3000"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 3xl:grid-cols-5  gap-4" data-aos="fade-up"
+          data-aos-duration="3000">
+
           <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
-                modelToggle: "img",
+                modelToggle: "img"
               })
             }
           >
             <Image
+              alt="Air Bag Sensor Image"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -118,11 +110,12 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Main Board iso.JPG",
                 modelTitle: "Main board",
-                modelToggle: "img",
+                modelToggle: "img"
               })
             }
           >
             <Image
+              alt="Main box"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -137,11 +130,12 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "display.jpg",
                 modelTitle: "Display",
-                modelToggle: "img",
+                modelToggle: "img"
               })
             }
           >
             <Image
+              alt="display"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -156,11 +150,12 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Radar Sensor iso.JPG",
                 modelTitle: "rader sensor",
-                modelToggle: "img",
+                modelToggle: "img"
               })
             }
           >
             <Image
+              alt="rader"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -175,11 +170,12 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Speedometer iso copy.JPG",
                 modelTitle: "Speedometer",
-                modelToggle: "img",
+                modelToggle: "img"
               })
             }
           >
             <Image
+              alt="speedometer"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -191,12 +187,8 @@ const ProjectCard = () => {
       </div>
 
       {/* TODO: long product */}
-      <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-4"
-        onMouseEnter={() => setProductImage({ modelToggle: "model" })}
-        data-aos="fade-up"
-        data-aos-duration="3000"
-      >
+      <div className="grid grid-cols-1 3xl:grid-cols-4 md:grid-cols-2 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
+        data-aos-duration="3000">
         <div className="grid gap-4">
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
