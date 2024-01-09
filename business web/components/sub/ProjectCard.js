@@ -44,7 +44,8 @@ const ProjectCard = () => {
               </h1>
 
               {productImage.modelToggle === "img" ?
-                <Image src={`/${productImage.modelImageUrl}`}
+                <Image 
+                  src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
                   alt="this is a img"
                   width={450}
@@ -175,11 +176,11 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt="speedometer"
               style={{ height: "15rem" }}
+              src={`/Speedometer iso copy.JPG`}
+              alt="speedometer"
               width={350}
               height={250}
-              src={`/Speedometer iso copy.JPG`}
               className="rounded-lg cursor-pointer"
             ></Image>
           </div>
