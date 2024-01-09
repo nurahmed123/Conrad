@@ -183,28 +183,6 @@ html {
   text-align: right;
 }
 
-  
-.faq__summary:after {
-  display: inline-block;
-  content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  text-align: right;
-  padding-bottom: 20px;
-}
-
-details[open] .faq__summary:after {
-  display: inline-block;
-  width: 18px;
-  height: 10px;
-  content: "";
-  background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
-  transform:scaleY(-1);
-}
-
-
 .faq__question {
   left: 0;
   position: absolute;

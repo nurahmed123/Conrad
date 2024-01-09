@@ -127,7 +127,7 @@ const projectdetailtab = () => {
                     <div className="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center z-[20]">
                         <div className="flex flex-col mb-10 lg:items-start items-center">
                             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-5">
-                                <svg
+                                {/* <svg
                                     fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
@@ -137,7 +137,13 @@ const projectdetailtab = () => {
                                     viewBox="0 0 24 24"
                                 >
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                                </svg>
+                                </svg> */}
+                                <Image
+                                src={"/outlook.svg"}
+                                height={80}
+                                width={80}
+                                alt="outlook"
+                                />
                             </div>
                             <div className="flex-grow">
                                 <h2 className="text-white text-lg title-font font-medium mb-3" data-aos="fade-left">
@@ -164,7 +170,7 @@ const projectdetailtab = () => {
                         </div>
                         <div className="flex flex-col mb-10 lg:items-start items-center">
                             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-5">
-                                <svg
+                                {/* <svg
                                     fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
@@ -176,7 +182,13 @@ const projectdetailtab = () => {
                                     <circle cx="6" cy="6" r="3"></circle>
                                     <circle cx="6" cy="18" r="3"></circle>
                                     <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                                </svg>
+                                </svg> */}
+                                <Image
+                                src={"/whay.svg"}
+                                height={80}
+                                width={80}
+                                alt="what"
+                                />
                             </div>
                             <div className="flex-grow">
                                 <h2 className="text-white text-lg title-font font-medium mb-3 cursor-pointer" data-aos="fade-left">
@@ -203,7 +215,7 @@ const projectdetailtab = () => {
                         </div>
                         <div className="flex flex-col mb-10 lg:items-start items-center">
                             <div className="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-5">
-                                <svg
+                                {/* <svg
                                     fill="none"
                                     stroke="currentColor"
                                     strokeLinecap="round"
@@ -214,7 +226,13 @@ const projectdetailtab = () => {
                                 >
                                     <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
                                     <circle cx="12" cy="7" r="4"></circle>
-                                </svg>
+                                </svg> */}
+                                <Image
+                                src={"/use.svg"}
+                                height={80}
+                                width={80}
+                                alt="what"
+                                />
                             </div>
                             <div className="flex-grow">
                                 <h2 className="text-white text-lg title-font font-medium mb-3" data-aos="fade-left">

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-// import React from "react";
 import Script from "next/script";
 import React, { useState } from "react";
 import {
@@ -82,7 +81,7 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4" data-aos="fade-up"
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 3xl:grid-cols-5  gap-4" data-aos="fade-up"
           data-aos-duration="3000">
 
           <div

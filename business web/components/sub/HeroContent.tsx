@@ -62,6 +62,7 @@ const  HeroContent = () => {
       >
         <Image
           src="/mainIconsdark.svg"
+          // src="/henoImg.png"
           alt="work icons"
           height={650}
           width={650}
