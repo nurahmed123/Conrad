@@ -4,13 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 
-
 const teamDetails = () => {
     return (
         <section className="text-gray-400 body-font z-[20]">
             <motion.div
                 variants={slideInFromLeft(0.5)}
-                className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
+                className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
             >
                 Our team
             </motion.div>
@@ -52,9 +51,11 @@ const teamDetails = () => {
                         </motion.a>
                     </div>
                 </div>
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6" data-aos="zoom-out-up">
+                <div
+                    className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6"
+                    data-aos="zoom-out-up"
+                >
                     <Image
-
                         height={1000}
                         width={700}
                         className="object-cover object-center rounded"

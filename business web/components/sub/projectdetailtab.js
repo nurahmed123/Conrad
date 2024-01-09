@@ -1,29 +1,28 @@
 "use client";
 import Image from "next/image";
-import { React, useState, useEffect } from 'react'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { React, useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import { motion } from 'framer-motion'
-import { slideInFromLeft } from '@/utils/motion'
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils/motion";
 
 const projectdetailtab = () => {
     useEffect(() => {
         AOS.init({
             duration: 900,
             once: false,
-        })
-    }, [])
+        });
+    }, []);
 
-    const [outLook, setoutLook] = useState(
-        {
-            showContent: `Introducing the Smart Road Safety Beast(SRSB), our mission is
+    const [outLook, setoutLook] = useState({
+        showContent: `Introducing the Smart Road Safety Beast(SRSB), our mission is
             to drive the rate of road accidents to zero. This innovative
             solution transcends conventional safety systems, integrating
             features such as real-time hazard detection, proactive
             accident prevention, comprehensive monitoring, and seamless
             emergency response. Our commitment ex...`,
-            fullContentL: `Introducing the Smart Road Safety Beast(SRSB), our mission is
+        fullContentL: `Introducing the Smart Road Safety Beast(SRSB), our mission is
             to drive the rate of road accidents to zero. This innovative
             solution transcends conventional safety systems, integrating
             features such as real-time hazard detection, proactive
@@ -42,12 +41,10 @@ const projectdetailtab = () => {
             Smart Road Safety Beast emerges as the beacon of progress,
             offering a comprehensive, reliable partner for enhancing road
             safety infrastructure.`,
-            contantMode: "show"
-        }
-    )
-    const [what, setWhat] = useState(
-        {
-            showContent: `To reduce the energy we lose due to various accidents
+        contantMode: "show",
+    });
+    const [what, setWhat] = useState({
+        showContent: `To reduce the energy we lose due to various accidents
             continuously this product going to be a golden one. Our
             carelessness is one of the big reasons for losing energy and
             lives. The cause of drugs and overnight driving most common
@@ -57,7 +54,7 @@ const projectdetailtab = () => {
             good. Even today’s world is also about security, according to
             this, our system will also check that you are the owner of it
             or someone else. When you start our sys...`,
-            fullContentL: `To reduce the energy we lose due to various accidents
+        fullContentL: `To reduce the energy we lose due to various accidents
             continuously this product going to be a golden one. Our
             carelessness is one of the big reasons for losing energy and
             lives. The cause of drugs and overnight driving most common
@@ -100,15 +97,14 @@ const projectdetailtab = () => {
             occurse our system will shated count down from 10 to 0 within
             this time if you are well then you can stop otherwise it will
             sent a message to the nearest hospital and fire station.`,
-            contantMode: "show",
-        }
-    )
+        contantMode: "show",
+    });
     return (
         <>
             <section className="text-gray-400 body-font" id="project">
                 <motion.div
                     variants={slideInFromLeft(0.5)}
-                    className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
+                    className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
                 >
                     Product overview
                 </motion.div>
@@ -139,13 +135,27 @@ const projectdetailtab = () => {
                                 </svg>
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-white text-lg title-font font-medium mb-3" data-aos="fade-left">
+                                <h2
+                                    className="text-white text-lg title-font font-medium mb-3"
+                                    data-aos="fade-left"
+                                >
                                     Out Look
                                 </h2>
                                 <p className="leading-relaxed text-lg " data-aos="fade-left">
-                                    {outLook.contantMode === "show" ? outLook.showContent : outLook.fullContentL}
+                                    {outLook.contantMode === "show"
+                                        ? outLook.showContent
+                                        : outLook.fullContentL}
                                 </p>
-                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setoutLook({ contantMode: outLook.contantMode == "show" ? "full" : "show" })}>
+                                <a
+                                    className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer"
+                                    data-aos="fade-left"
+                                    onClick={() =>
+                                        setoutLook({
+                                            contantMode:
+                                                outLook.contantMode == "show" ? "full" : "show",
+                                        })
+                                    }
+                                >
                                     Learn More
                                     <svg
                                         fill="none"
@@ -178,13 +188,26 @@ const projectdetailtab = () => {
                                 </svg>
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-white text-lg title-font font-medium mb-3 cursor-pointer" data-aos="fade-left">
+                                <h2
+                                    className="text-white text-lg title-font font-medium mb-3 cursor-pointer"
+                                    data-aos="fade-left"
+                                >
                                     What & Why
                                 </h2>
                                 <p className="leading-relaxed text-base" data-aos="fade-left">
-                                    {what.contantMode === "show" ? what.showContent : what.fullContentL}
+                                    {what.contantMode === "show"
+                                        ? what.showContent
+                                        : what.fullContentL}
                                 </p>
-                                <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setWhat({ contantMode: what.contantMode == "show" ? "full" : "show" })}>
+                                <a
+                                    className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer"
+                                    data-aos="fade-left"
+                                    onClick={() =>
+                                        setWhat({
+                                            contantMode: what.contantMode == "show" ? "full" : "show",
+                                        })
+                                    }
+                                >
                                     Learn More
                                     <svg
                                         fill="none"
@@ -216,7 +239,10 @@ const projectdetailtab = () => {
                                 </svg>
                             </div>
                             <div className="flex-grow">
-                                <h2 className="text-white text-lg title-font font-medium mb-3" data-aos="fade-left">
+                                <h2
+                                    className="text-white text-lg title-font font-medium mb-3"
+                                    data-aos="fade-left"
+                                >
                                     Use
                                 </h2>
                                 <p className="leading-relaxed text-base" data-aos="fade-left">
@@ -246,7 +272,6 @@ const projectdetailtab = () => {
             </section>
         </>
     );
-
 };
 
 export default projectdetailtab;

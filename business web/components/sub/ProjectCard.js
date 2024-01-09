@@ -48,14 +48,15 @@ const ProjectCard = () => {
                 {productImage.modelTitle}
               </h1>
 
-              {productImage.modelToggle === "img" ?
-                <Image src={`/${productImage.modelImageUrl}`}
+              {productImage.modelToggle === "img" ? (
+                <Image
+                  src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
                   alt="this is a img"
                   width={450}
                   height={300}
                 />
-                :
+              ) : (
                 <model-viewer
                   src={`/formatted/${productImage.modelURL}`}
                   style={{ width: "45rem", height: "45rem" }}
@@ -65,17 +66,18 @@ const ProjectCard = () => {
                   poster="poster.webp"
                   shadow-intensity="1"
                   environment-image="legacy"
-                >
-                </model-viewer>
-              }
-
+                ></model-viewer>
+              )}
             </>
           )}
         </ModalContent>
       </Modal>
 
-      <div className="grid gap-4 w-4/5 welcome-box mx-auto" data-aos="fade-up"
-     data-aos-duration="3000">
+      <div
+        className="grid gap-4 w-4/5 welcome-box mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="flex justify-center">
           <video
             autoPlay
@@ -86,17 +88,18 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video>
         </div>
-        <div className="grid grid-cols-5 gap-4" data-aos="fade-up"
-     data-aos-duration="3000">
-
-
+        <div
+          className="grid grid-cols-5 gap-4"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
-                modelToggle: "img"
+                modelToggle: "img",
               })
             }
           >
@@ -115,7 +118,7 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Main Board iso.JPG",
                 modelTitle: "Main board",
-                modelToggle: "img"
+                modelToggle: "img",
               })
             }
           >
@@ -134,7 +137,7 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "display.jpg",
                 modelTitle: "Display",
-                modelToggle: "img"
+                modelToggle: "img",
               })
             }
           >
@@ -153,7 +156,7 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Radar Sensor iso.JPG",
                 modelTitle: "rader sensor",
-                modelToggle: "img"
+                modelToggle: "img",
               })
             }
           >
@@ -172,7 +175,7 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Speedometer iso copy.JPG",
                 modelTitle: "Speedometer",
-                modelToggle: "img"
+                modelToggle: "img",
               })
             }
           >
@@ -188,8 +191,12 @@ const ProjectCard = () => {
       </div>
 
       {/* TODO: long product */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
-     data-aos-duration="3000">
+      <div
+        className="grid grid-cols-2 md:grid-cols-4 gap-4"
+        onMouseEnter={() => setProductImage({ modelToggle: "model" })}
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         <div className="grid gap-4">
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
