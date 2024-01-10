@@ -47,7 +47,7 @@ const ProjectCard = () => {
                 <Image
                   src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
-                  alt="this is a img"
+                  alt=""
                   width={450}
                   height={300}
                 />
@@ -98,7 +98,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt="Air Bag Sensor Image"
+              alt=""
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -118,7 +118,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt="Main box"
+              alt=""
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -138,7 +138,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt="display"
+              alt=""
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -158,7 +158,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt="rader"
+              alt=""
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -180,7 +180,7 @@ const ProjectCard = () => {
             <Image
               style={{ height: "15rem" }}
               src={`/Speedometer iso copy.JPG`}
-              alt="speedometer"
+              alt=""
               width={350}
               height={250}
               className="rounded-lg cursor-pointer"
