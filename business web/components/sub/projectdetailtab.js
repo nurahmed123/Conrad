@@ -148,7 +148,7 @@ const projectdetailtab = () => {
                                 <h2 className="text-white text-lg title-font font-medium mb-3" data-aos="fade-left">
                                     Out Look
                                 </h2>
-                                <p className="leading-relaxed text-lg " data-aos="fade-left">
+                                <p className="leading-relaxed text-lg" data-aos="fade-left">
                                     {outLookTrigger === "show" ? outLook.showContent : outLook.fullContentL}
                                 </p>
                                 <a className="mt-3 text-indigo-400 inline-flex items-center cursor-pointer" data-aos="fade-left" onClick={() => setOutLookTrigger(outLookTrigger === "show" ? "full" : "show")}>

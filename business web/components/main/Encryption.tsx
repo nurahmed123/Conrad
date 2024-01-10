@@ -57,9 +57,11 @@ const Encryption = () => {
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-auto"
+          
           src="/encryption.webm/"
         />
+        {/* VPY_from_APL1 */}
+
       </div>
     </div>
   );
