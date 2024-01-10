@@ -113,7 +113,7 @@ const projectdetailtab = () => {
                     Product overview
                 </motion.div>
                 <div className="px-5 py-24 mx-auto flex flex-wrap items-center">
-                    <div className=" justify-center items-center lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+                    <div className="justify-center items-center lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden leading-relaxed text-lg">
                         <Image
                             data-aos="fade-right"
                             alt="feature"

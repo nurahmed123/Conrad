@@ -26,7 +26,7 @@ const Footer = () => {
                         <div className="font-bold text-[16px]">Community</div>
                         <p className="flex flex-row items-center my-[15px] cursor-pointer">
                             <FaYoutube />
-                            <span className="text-[15px] ml-[6px]"><Link target="_blank" href="https://youtube.com/bongprogramiz">Youtube</Link></span>
+                            <span className="text-[15px] ml-[6px]"><Link target="_blank" href="https://www.youtube.com/channel/UC6UUD4oDkMDp2KIv9mcZZuA">Youtube</Link></span>
                         </p>
                         <p className="flex flex-row items-center my-[15px] cursor-pointer">
                             <RxGithubLogo />
