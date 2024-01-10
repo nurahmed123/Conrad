@@ -34,17 +34,17 @@ const teamDetails = () => {
             At our new startup, our collaborative Not a Boring Team(NBT),
             comprises skilled individuals committed to reshaping road safety.
             Twa-Shin, our lead, excels in robotics, ICT, business and Physics,
-            backed by a track record of regional and national awarded.<br/>Mahdi Bin
+            backed by a track record of regional and national awarded.<br />Mahdi Bin
             Ferdaus, a hardware virtuoso, adeptly manages components, garnering
-            recognition regionally and nationally. <br/>Nadim Shahriar Apurbo
+            recognition regionally and nationally. <br />Nadim Shahriar Apurbo
             specializes in UAV technology and Robotics, merging drone expertise
             with hardware finesse. Backed by a track record he was regional and
-            national awarded in the field of Robotics and Technology. <br/>Nur Ahmad,
+            national awarded in the field of Robotics and Technology. <br />Nur Ahmad,
             a software and embedded expert, working with advanced programming,
             neural networks and machine learning contributing significantly to
             our tech solutions, garnering recognition regionally and nationally.
-            <br/>Sunjim, specializes in 3D, visual design and presentations, earning
-            international acclaim in robotics. <br/>Our team members have many
+            <br />Sunjim, specializes in 3D, visual design and presentations, earning
+            international acclaim in robotics. <br />Our team members have many
             national and international recognition. As NBT, we extend beyond
             being a startup, actively providing tech solutions while addressing
             the critical issue of road accidents. Our collective dedication is
@@ -123,11 +123,11 @@ const teamDetails = () => {
               <div className="member-info">
                 <div className="flex">
                   <span className="px-2">Working:</span>
-                  <span>Hardware virtuoso, adeptly manages components</span>
+                  <span>Product Developer and Research</span>
                 </div>
                 <div className="flex">
                   <span className="px-2">Phone:</span>
-                  <a href="tel:+8801761776336">+880 1761776336</a>
+                  <a href="tel:+8801774254696">+880 1774254696</a>
                 </div>
                 <div className="flex">
                   <span className="px-2">Email:</span>
@@ -227,7 +227,7 @@ const teamDetails = () => {
               <div className="member-info">
                 <div className="flex">
                   <span className="px-2">Working:</span>
-                  <span>3D, visual design and presentations</span>
+                  <span>Research and design</span>
                 </div>
                 <div className="flex">
                   <span className="px-2">Phone:</span>
@@ -290,8 +290,8 @@ const teamDetails = () => {
                 </div>
                 <div className="flex">
                   <span className="px-2">Email:</span>
-                  <a href="mailto: nurahmed6@icloud.com">
-                    nurahmed6@icloud.com
+                  <a href="mailto: nadimshahriarapurbo@g mail.com">
+                    nadimshahriarapurbo@g mail.com
                   </a>
                 </div>
                 <div className="flex my-4">
@@ -320,7 +320,7 @@ const teamDetails = () => {
               </div>
             </details>
 
-            
+
           </div>
 
           <div className="flex justify-center mt-6">
