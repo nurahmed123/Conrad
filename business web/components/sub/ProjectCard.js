@@ -81,7 +81,7 @@ const ProjectCard = () => {
           >
             <source src="/ProductVideo.mov" />
           </video> */}
-          <iframe width="660" height="415" classNames="rounded-lg" src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="660" height="415" src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 3xl:grid-cols-5  gap-4" data-aos="fade-up"
