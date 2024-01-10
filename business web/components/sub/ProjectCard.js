@@ -44,7 +44,7 @@ const ProjectCard = () => {
               </h1>
 
               {productImage.modelToggle === "img" ?
-                <Image 
+                <Image
                   src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
                   alt="this is a img"
@@ -73,14 +73,16 @@ const ProjectCard = () => {
       <div className="grid gap-4 w-4/5 welcome-box mx-auto" data-aos="fade-up"
         data-aos-duration="3000">
         <div className="flex justify-center">
-          <video
+          {/* <video
             autoPlay
             muted
             loop
             style={{ width: "65rem", height: "45rem" }}
           >
             <source src="/ProductVideo.mov" />
-          </video>
+          </video> */}
+          <iframe width="660" height="415" classNames="rounded-lg" src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 3xl:grid-cols-5  gap-4" data-aos="fade-up"
           data-aos-duration="3000">

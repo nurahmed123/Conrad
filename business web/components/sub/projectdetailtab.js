@@ -15,7 +15,7 @@ const projectdetailtab = () => {
         })
     }, [])
 
-    const [outLook, setoutLook] = useState(
+    const [outLook] = useState(
         {
             showContent: `Introducing the Smart Road Safety Beast(SRSB), our mission is
             to drive the rate of road accidents to zero. This innovative
@@ -45,7 +45,7 @@ const projectdetailtab = () => {
         }
     )
     const [outLookTrigger, setOutLookTrigger] = useState("show")
-    const [what, setWhat] = useState(
+    const [what] = useState(
         {
             showContent: `To reduce the energy we lose due to various accidents
             continuously this product going to be a golden one. Our
