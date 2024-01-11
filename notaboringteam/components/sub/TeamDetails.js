@@ -11,7 +11,8 @@ const teamDetails = () => {
   const [teamInfo, setTeamInfo] = useState("show");
 
   return (
-    <section className="text-gray-400 body-font z-[20]">
+    <section className="text-gray-400 body-font z-[20]" data-aos="fade-up"
+      data-aos-duration="3000">
       <motion.div
         variants={slideInFromLeft(0.5)}
         className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
@@ -94,18 +95,7 @@ const teamDetails = () => {
                       height={24}
                     />
                   </Link>
-                  <Link
-                    target="_bank"
-                    href="www.https://github.com/nurahmed123"
-                  >
-                    <Image
-                      className="mr-4"
-                      alt="github"
-                      src={"/github.png"}
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
+                  
                 </div>
               </div>
             </details>
@@ -146,18 +136,7 @@ const teamDetails = () => {
                       height={24}
                     />
                   </Link>
-                  <Link
-                    target="_bank"
-                    href="www.https://github.com/nurahmed123"
-                  >
-                    <Image
-                      className="mr-4"
-                      alt="github"
-                      src={"/github.png"}
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
+                  
                 </div>
               </div>
             </details>
@@ -236,8 +215,8 @@ const teamDetails = () => {
                 </div>
                 <div className="flex">
                   <span className="px-2">Email:</span>
-                  <a href="mailto: nurahmed6@icloud.com">
-                    nurahmed6@icloud.com
+                  <a href="mailto: sunjimhossain10@gmail.com">
+                    sunjimhossain10@gmail.com
                   </a>
                 </div>
                 <div className="flex my-4">
@@ -246,18 +225,6 @@ const teamDetails = () => {
                       className="mr-4"
                       alt="facebook"
                       src={"/facebook.svg"}
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
-                  <Link
-                    target="_bank"
-                    href="www.https://github.com/nurahmed123"
-                  >
-                    <Image
-                      className="mr-4"
-                      alt="github"
-                      src={"/github.png"}
                       width={24}
                       height={24}
                     />
@@ -291,8 +258,8 @@ const teamDetails = () => {
                 </div>
                 <div className="flex">
                   <span className="px-2">Email:</span>
-                  <a href="mailto: nadimshahriarapurbo@g mail.com">
-                    nadimshahriarapurbo@g mail.com
+                  <a href="mailto: nadimshahriarapurbo@gmail.com">
+                    nadimshahriarapurbo@gmail.com
                   </a>
                 </div>
                 <div className="flex my-4">
@@ -301,18 +268,6 @@ const teamDetails = () => {
                       className="mr-4"
                       alt="facebook"
                       src={"/facebook.svg"}
-                      width={24}
-                      height={24}
-                    />
-                  </Link>
-                  <Link
-                    target="_bank"
-                    href="www.https://github.com/nurahmed123"
-                  >
-                    <Image
-                      className="mr-4"
-                      alt="github"
-                      src={"/github.png"}
                       width={24}
                       height={24}
                     />

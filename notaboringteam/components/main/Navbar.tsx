@@ -54,7 +54,7 @@ const Navbar = () => {
               width={24}
               height={24}
             /> */}
-            <Link target="_bank" href="https://facebook.com/06nurahmed">
+            <Link target="_bank" href="https://www.facebook.com/profile.php?id=61555697092873">
             <Image
             alt="facebook"
             src={"/facebook.svg"}
@@ -62,7 +62,7 @@ const Navbar = () => {
             height={24}
             /></Link>
 
-            <Link target="_bank" href="https://instagram.com/06nurahmed">
+            <Link target="_bank" href="https://instagram.com/notaboringteam">
             <Image
             alt="instagram"
             src={"/instagram.svg"}

@@ -47,7 +47,7 @@ const ProjectCard = () => {
                 <Image
                   src={`/${productImage.modelImageUrl}`}
                   style={{ width: "45rem", height: "45rem" }}
-                  alt=""
+                  alt="this is a img"
                   width={450}
                   height={300}
                 />
@@ -81,7 +81,26 @@ const ProjectCard = () => {
           >
             <source src="/ProductVideo.mov" />
           </video> */}
-          <iframe className=""  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelImageUrl: "motherbox.jpeg",
+                modelTitle: "Main box",
+                modelToggle: "img"
+              })
+            }
+          >
+            <Image
+              alt="Air Bag Sensor Image"
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/motherbox.jpeg`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
           {/* width="250rem" height="200rem" */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 3xl:grid-cols-5  gap-4" data-aos="fade-up"
@@ -98,7 +117,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt=""
+              alt="Air Bag Sensor Image"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -118,7 +137,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt=""
+              alt="Main box"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -138,7 +157,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt=""
+              alt="display"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -158,7 +177,7 @@ const ProjectCard = () => {
             }
           >
             <Image
-              alt=""
+              alt="rader"
               style={{ height: "15rem" }}
               width={350}
               height={250}
@@ -180,7 +199,7 @@ const ProjectCard = () => {
             <Image
               style={{ height: "15rem" }}
               src={`/Speedometer iso copy.JPG`}
-              alt=""
+              alt="speedometer"
               width={350}
               height={250}
               className="rounded-lg cursor-pointer"
@@ -216,7 +235,7 @@ const ProjectCard = () => {
             ></model-viewer>
           </div>
 
-          <div
+          {/* <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
@@ -237,7 +256,29 @@ const ProjectCard = () => {
               environment-image="legacy"
               auto-rotate
             ></model-viewer>
-          </div>
+          </div> */}
+          {/* <div
+            className="bg-[#dee0e1] flex justify-center items-center rounded-md"
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelURL: "rain sensor.glb",
+                modelTitle: "Rain sensor",
+              })
+            }
+          >
+            <model-viewer
+              style={{ height: "25rem" }}
+              src={`/formatted/rain sensor.glb`}
+              ar-modes="webxr scene-viewer quick-look"
+              camera-controls
+              tone-mapping="commerce"
+              poster="poster.webp"
+              shadow-intensity="1"
+              environment-image="legacy"
+              auto-rotate
+            ></model-viewer>
+          </div> */}
 
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
@@ -263,7 +304,7 @@ const ProjectCard = () => {
           </div>
         </div>
         <div className="grid gap-4">
-          <div
+          {/* <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
@@ -284,9 +325,9 @@ const ProjectCard = () => {
               environment-image="legacy"
               auto-rotate
             ></model-viewer>
-          </div>
+          </div> */}
 
-          <div
+          {/* <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
@@ -307,7 +348,7 @@ const ProjectCard = () => {
               environment-image="legacy"
               auto-rotate
             ></model-viewer>
-          </div>
+          </div> */}
 
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
@@ -379,7 +420,7 @@ const ProjectCard = () => {
             ></model-viewer>
           </div>
 
-          <div
+          {/* <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
@@ -400,7 +441,7 @@ const ProjectCard = () => {
               environment-image="legacy"
               auto-rotate
             ></model-viewer>
-          </div>
+          </div> */}
         </div>
         <div className="grid gap-4">
           <div
@@ -426,7 +467,7 @@ const ProjectCard = () => {
             ></model-viewer>
           </div>
 
-          <div
+          {/* <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
@@ -447,21 +488,21 @@ const ProjectCard = () => {
               environment-image="legacy"
               auto-rotate
             ></model-viewer>
-          </div>
+          </div> */}
 
           <div
             className="bg-[#dee0e1] flex justify-center items-center rounded-md"
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelURL: "display.glb",
-                modelTitle: "Display",
+                modelURL: "speedometer.glb",
+                modelTitle: "Speedometer",
               })
             }
           >
             <model-viewer
               style={{ height: "25rem" }}
-              src={`/formatted/display.glb`}
+              src={`/formatted/speedometer.glb`}
               ar-modes="webxr scene-viewer quick-look"
               camera-controls
               tone-mapping="commerce"
