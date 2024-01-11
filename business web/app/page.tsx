@@ -2,7 +2,6 @@ import Encryption from "@/components/main/Encryption";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
-import Image from "next/image";
 import ProjectDetailTab from "@/components/sub/Projectdetailtab";
 import TeamDetails from "@/components/sub/TeamDetails";
 import Compare from "@/components/sub/compare";
