@@ -11,7 +11,7 @@ const compare = () => {
                 variants={slideInFromLeft(0.5)}
                 className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
             >
-                Our target
+                Our target 
             </motion.div>
             <div data-aos="zoom-in" className="container flex flex-wrap px-5 py-24 mx-auto items-center ">
                 <div className="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
