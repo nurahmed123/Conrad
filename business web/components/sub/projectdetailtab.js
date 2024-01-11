@@ -1,4 +1,5 @@
-"use client";
+'use client'
+/* eslint-disable */
 import Image from "next/image";
 import { React, useState, useEffect } from 'react'
 import AOS from 'aos';
