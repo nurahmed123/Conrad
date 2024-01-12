@@ -184,10 +184,10 @@ const pricing = () => {
                                 <div className="text-5xl">
                                     {/* ✿ */}
                                     <Image
-                                        href={"/goldpack.png"}
+                                        src={"/goldpack.png"}
                                         alt="Gold Pack"
-                                        height={78}
-                                        width={78}
+                                        height={35}
+                                        width={35}
                                     />
                                 </div>
                                 <p className="font-mono text-lg font-medium">GOLDEN UNICORN</p>
