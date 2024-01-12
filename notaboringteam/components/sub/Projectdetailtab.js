@@ -15,7 +15,7 @@ const projectdetailtab = () => {
             once: false,
         })
     }, [])
-
+ 
     const outLook = 
         {
             showContent: `Introducing the Smart Road Safety Beast(SRSB), our mission is
