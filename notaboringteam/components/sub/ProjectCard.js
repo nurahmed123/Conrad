@@ -81,7 +81,7 @@ const ProjectCard = () => {
           >
             <source src="/ProductVideo.mov" />
           </video> */}
-          <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+          {/* <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
           <div
             onClick={onOpen}
             onMouseEnter={() =>
@@ -95,8 +95,8 @@ const ProjectCard = () => {
             <Image
               alt="Air Bag Sensor Image"
               style={{ height: "15rem" }}
-              width={350}
-              height={250}
+              width={550}
+              height={350}
               src={`/motherbox.jpeg`}
               className="rounded-lg cursor-pointer"
             ></Image>
