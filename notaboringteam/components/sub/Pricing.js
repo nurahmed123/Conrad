@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const pricing = () => {
     return (
-        <section className="relative overflow-hidden h-[100vh] z-[20]" data-aos="zoom-out-up">
+        <section className="relative overflow-hidden z-[20]" data-aos="zoom-out-up">
             <motion.div
                 variants={slideInFromLeft(0.5)}
                 className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
@@ -78,7 +78,7 @@ const pricing = () => {
             </svg>
             <div className="relative flex flex-col items-center justify-center px-8 py-12 mx-auto md:px-12 lg:px-16 xl:px-36 max-w-7xl lg:py-16">
                 <div className="grid grid-cols-1 gap-6 lg lg:grid-cols-3 gap-y-12">
-                    <div>
+                    <div data-aos="zoom-out-up">
                         <div className="px-4">
                             <div className="flex items-center gap-3 text-white">
                                 <div className="text-5xl">✺</div>
@@ -128,7 +128,7 @@ const pricing = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div data-aos="zoom-out-up">
                         <div className="px-4">
                             <div className="flex items-center gap-3 text-cyan-400">
                                 <div className="text-5xl">❆</div>
@@ -178,7 +178,7 @@ const pricing = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div data-aos="zoom-out-up">
                         <div className="px-4">
                             <div className="flex items-center gap-3 text-white">
                                 <div className="text-5xl">
