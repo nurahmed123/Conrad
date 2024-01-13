@@ -17,7 +17,7 @@ const teamDetails = () => {
         variants={slideInFromLeft(0.5)}
         className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
       >
-        Our team
+        Our R&D team
       </motion.div>
       <div className="w-[90%] mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div
