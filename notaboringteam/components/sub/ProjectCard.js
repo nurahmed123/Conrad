@@ -128,7 +128,7 @@ const ProjectCard = () => {
             ></Image>
           </div>
 
-          <div
+          {/* <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
@@ -146,7 +146,7 @@ const ProjectCard = () => {
               src={`/Main Board iso.JPG`}
               className="rounded-lg cursor-pointer"
             ></Image>
-          </div>
+          </div> */}
 
           <div
             onClick={onOpen}
