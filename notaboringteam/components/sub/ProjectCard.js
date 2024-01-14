@@ -2,6 +2,8 @@
 import Image from "next/image";
 import Script from "next/script";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils/motion";
 import {
   Modal,
   ModalContent,
@@ -87,7 +89,7 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelImageUrl: "motherbox.jpeg",
-                modelTitle: "Main box",
+                modelTitle: "Mother Box",
                 modelToggle: "img"
               })
             }
@@ -131,7 +133,7 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelImageUrl: "Main Board iso.JPG",
-                modelTitle: "Main board",
+                modelTitle: "Mother Box",
                 modelToggle: "img"
               })
             }
@@ -207,6 +209,14 @@ const ProjectCard = () => {
           </div>
         </div>
       </div>
+
+      <motion.div
+        variants={slideInFromLeft(0.5)}
+        className="text-[25px] text-white font-medium mt-[10px] text-center mb-[15px]"
+      >
+        Have a close look
+      </motion.div>
+
 
       {/* TODO: long product */}
       <div className="grid grid-cols-1 3xl:grid-cols-4 md:grid-cols-2 gap-4" onMouseEnter={() => setProductImage({ modelToggle: "model" })} data-aos="fade-up"
@@ -380,7 +390,7 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelURL: "part1BaseWithPorts.glb",
-                modelTitle: "Main board",
+                modelTitle: "Mother Box",
               })
             }
           >
