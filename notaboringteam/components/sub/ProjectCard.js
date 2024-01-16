@@ -91,7 +91,7 @@ const ProjectCard = () => {
                           </div>
                           <div className="mt-8">
                           
-                            <h3 className="mb-4 font-bold text-gray-100">Total: <span class="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } $</h3>
+                            <h3 className="mb-4 font-bold text-gray-100">Total: <span className="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } $</h3>
                             <motion.a
                               variants={slideInFromLeft(1)}
                               className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
