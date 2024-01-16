@@ -17,6 +17,7 @@ const ProjectCard = () => {
     modelImageUrl: "",
     modelTitle: "",
     modelToggle: "",
+    price: 0.00,
     buy: false,
   });
   const [showBuy, setShowBuy] = useState(false)
@@ -66,28 +67,29 @@ const ProjectCard = () => {
                     />
                     :
                     <div className="w-full max-w-lg mx-auto p-8">
-                      <div className="bg-white rounded-lg shadow-lg p-6">
+                      <div className=" bg-slate-900 rounded-lg shadow-lg p-6">
                         <h2 className="text-lg font-medium mb-6">Payment Information</h2>
                         <form>
                           <div className="grid grid-cols-2 gap-6">
                             <div className="col-span-2 sm:col-span-1">
-                              <label for="card-number" className="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
-                              <input type="text" name="card-number" id="card-number" placeholder="0000 0000 0000 0000" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                              <label for="card-number" className="block text-sm font-medium text-gray-100 mb-2">Card Number</label>
+                              <input type="text" name="card-number" id="card-number" placeholder="0000 0000 0000 0000" className="w-full bg-slate-600 py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
                             </div>
                             <div className="col-span-2 sm:col-span-1">
-                              <label for="expiration-date" className="block text-sm font-medium text-gray-700 mb-2">Expiration Date</label>
-                              <input type="text" name="expiration-date" id="expiration-date" placeholder="MM / YY" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                              <label for="expiration-date" className="block text-sm font-medium text-gray-100 mb-2">Expiration Date</label>
+                              <input type="text" name="expiration-date" id="expiration-date" placeholder="MM / YY" className="w-full bg-slate-600 py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
                             </div>
                             <div className="col-span-2 sm:col-span-1">
-                              <label for="cvv" className="block text-sm font-medium text-gray-700 mb-2">CVV</label>
-                              <input type="text" name="cvv" id="cvv" placeholder="000" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                              <label for="cvv" className="block text-sm font-medium text-gray-100 mb-2">CVV</label>
+                              <input type="text" name="cvv" id="cvv" placeholder="000" className="w-full bg-slate-600 py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
                             </div>
                             <div className="col-span-2 sm:col-span-1">
-                              <label for="card-holder" className="block text-sm font-medium text-gray-700 mb-2">Card Holder</label>
-                              <input type="text" name="card-holder" id="card-holder" placeholder="Full Name" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                              <label for="card-holder" className="block text-sm font-medium text-gray-100 mb-2">Card Holder</label>
+                              <input type="text" name="card-holder" id="card-holder" placeholder="Full Name" className="w-full bg-slate-600 py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
                             </div>
                           </div>
                           <div className="mt-8">
+                            <h3 className="mb-4 text-gray-100">Total: { productImage.price }</h3>
                             <motion.a
                               variants={slideInFromLeft(1)}
                               className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
@@ -150,7 +152,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "full product.png",
                 modelTitle: "Full Package",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -175,7 +178,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "motherbox.jpeg",
                 modelTitle: "Mother Box",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -196,7 +200,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -217,7 +222,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "WEB CAM iso.JPG",
                 modelTitle: "Web cam",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -239,7 +245,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Vibrator.png",
                 modelTitle: "Vibrator",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -260,7 +267,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "display.jpg",
                 modelTitle: "Display",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -281,7 +289,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Radar Sensor iso.JPG",
                 modelTitle: "rader sensor",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -302,7 +311,8 @@ const ProjectCard = () => {
               setProductImage({
                 modelImageUrl: "Speedometer iso copy.JPG",
                 modelTitle: "Speedometer",
-                modelToggle: "img"
+                modelToggle: "img",
+                price: 299.99
               })
             }
             onMouseMove={() => setShowBuy(false)}
