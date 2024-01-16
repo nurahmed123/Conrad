@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Script from "next/script";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import {
@@ -17,7 +17,14 @@ const ProjectCard = () => {
     modelImageUrl: "",
     modelTitle: "",
     modelToggle: "",
+    buy: false,
   });
+  const [showBuy, setShowBuy] = useState(false)
+  // useEffect(() => {
+  //   setShowBuy(productImage.buy?false:true )
+  // }, [showBuy])
+
+
 
   return (
     <>
@@ -46,13 +53,63 @@ const ProjectCard = () => {
               </h1>
 
               {productImage.modelToggle === "img" ?
-                <Image
-                  src={`/${productImage.modelImageUrl}`}
-                  style={{ width: "45rem", height: "45rem" }}
-                  alt="this is a img"
-                  width={450}
-                  height={300}
-                />
+                <>
+                  {!showBuy ?
+                    <Image
+                      src={`/${productImage.modelImageUrl}`}
+                      style={{ width: "45rem", height: "45rem" }}
+                      alt="this is a img"
+                      // width={250}
+                      // height={100}
+                      width={450}
+                      height={300}
+                    />
+                    :
+                    <div className="w-full max-w-lg mx-auto p-8">
+                      <div className="bg-white rounded-lg shadow-lg p-6">
+                        <h2 className="text-lg font-medium mb-6">Payment Information</h2>
+                        <form>
+                          <div className="grid grid-cols-2 gap-6">
+                            <div className="col-span-2 sm:col-span-1">
+                              <label for="card-number" className="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                              <input type="text" name="card-number" id="card-number" placeholder="0000 0000 0000 0000" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                            </div>
+                            <div className="col-span-2 sm:col-span-1">
+                              <label for="expiration-date" className="block text-sm font-medium text-gray-700 mb-2">Expiration Date</label>
+                              <input type="text" name="expiration-date" id="expiration-date" placeholder="MM / YY" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                            </div>
+                            <div className="col-span-2 sm:col-span-1">
+                              <label for="cvv" className="block text-sm font-medium text-gray-700 mb-2">CVV</label>
+                              <input type="text" name="cvv" id="cvv" placeholder="000" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                            </div>
+                            <div className="col-span-2 sm:col-span-1">
+                              <label for="card-holder" className="block text-sm font-medium text-gray-700 mb-2">Card Holder</label>
+                              <input type="text" name="card-holder" id="card-holder" placeholder="Full Name" className="w-full py-3 px-4 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-500" />
+                            </div>
+                          </div>
+                          <div className="mt-8">
+                            <motion.a
+                              variants={slideInFromLeft(1)}
+                              className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+                            >
+                              Proccess
+                            </motion.a>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  }
+
+                  <motion.a
+                    variants={slideInFromLeft(1)}
+                    className={`${!showBuy ? "block" : "hidden"} py-2 my-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]`}
+                    onClick={() =>
+                      setShowBuy(true)
+                    }
+                  >
+                    Buy Now
+                  </motion.a>
+                </>
                 :
                 <model-viewer
                   src={`/formatted/${productImage.modelURL}`}
@@ -84,22 +141,26 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video> */}
           {/* <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
+          <iframe className="mx-6" width="560" height="300" src="https://www.youtube.com/embed/6053wFaAZzc?si=ImnMh604yuLjH8dl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
           <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelImageUrl: "motherbox.jpeg",
-                modelTitle: "Mother Box",
+                modelImageUrl: "full product.png",
+                modelTitle: "Full Package",
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
-              alt="Air Bag Sensor Image"
-              style={{ height: "15rem" }}
+              alt="Full package"
+              style={{ height: "18.5rem" }}
               width={550}
               height={350}
-              src={`/motherbox.jpeg`}
+              src={`/full product.png`}
               className="rounded-lg cursor-pointer"
             ></Image>
           </div>
@@ -112,11 +173,33 @@ const ProjectCard = () => {
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
+                modelImageUrl: "motherbox.jpeg",
+                modelTitle: "Mother Box",
+                modelToggle: "img"
+              })
+            }
+            onMouseMove={() => setShowBuy(false)}
+          >
+            <Image
+              alt="Air Bag Sensor Image"
+              style={{ height: "15rem" }}
+              width={550}
+              height={350}
+              src={`/motherbox.jpeg`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
+
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
               alt="Air Bag Sensor Image"
@@ -128,25 +211,48 @@ const ProjectCard = () => {
             ></Image>
           </div>
 
-          {/* <div
+          <div
             onClick={onOpen}
             onMouseEnter={() =>
               setProductImage({
-                modelImageUrl: "Main Board iso.JPG",
-                modelTitle: "Mother Box",
+                modelImageUrl: "WEB CAM iso.JPG",
+                modelTitle: "Web cam",
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
               alt="Main box"
               style={{ height: "15rem" }}
               width={350}
               height={250}
-              src={`/Main Board iso.JPG`}
+              src={`/WEB CAM iso.JPG`}
               className="rounded-lg cursor-pointer"
             ></Image>
-          </div> */}
+          </div>
+
+
+          <div
+            onClick={onOpen}
+            onMouseEnter={() =>
+              setProductImage({
+                modelImageUrl: "Vibrator.png",
+                modelTitle: "Vibrator",
+                modelToggle: "img"
+              })
+            }
+            onMouseMove={() => setShowBuy(false)}
+          >
+            <Image
+              alt="Main box"
+              style={{ height: "15rem" }}
+              width={350}
+              height={250}
+              src={`/Vibrator.png`}
+              className="rounded-lg cursor-pointer"
+            ></Image>
+          </div>
 
           <div
             onClick={onOpen}
@@ -157,6 +263,7 @@ const ProjectCard = () => {
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
               alt="display"
@@ -177,6 +284,7 @@ const ProjectCard = () => {
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
               alt="rader"
@@ -197,6 +305,7 @@ const ProjectCard = () => {
                 modelToggle: "img"
               })
             }
+            onMouseMove={() => setShowBuy(false)}
           >
             <Image
               style={{ height: "15rem" }}
