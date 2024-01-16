@@ -660,7 +660,7 @@ const ProjectCard = () => {
         Deep view to the features
       </motion.div>
       <div className="flex justify-center align-center w-full">
-        <iframe className="mx-6" width="560" height="300" src="https://www.youtube.com/embed/6053wFaAZzc?si=ImnMh604yuLjH8dl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe className="mx-6" width="560" height="300" src="https://www.youtube.com/embed/6053wFaAZzc?si=ImnMh604yuLjH8dl" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
       </div>
     </>
   );
