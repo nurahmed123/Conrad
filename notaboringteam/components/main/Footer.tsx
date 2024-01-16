@@ -70,7 +70,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mb-[20px] text-[15px] text-center">
-                    &copy; Not A Boring Team 2023 Inc. All rights reserved
+                    &copy; Not A Boring Team 2024 Inc. All rights reserved
                 </div>
             </div>
         </div>

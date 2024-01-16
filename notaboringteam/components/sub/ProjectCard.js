@@ -18,6 +18,7 @@ const ProjectCard = () => {
     modelTitle: "",
     modelToggle: "",
     price: 0.00,
+    disPrice: 0.00,
     buy: false,
   });
   const [showBuy, setShowBuy] = useState(false)
@@ -89,7 +90,8 @@ const ProjectCard = () => {
                             </div>
                           </div>
                           <div className="mt-8">
-                            <h3 className="mb-4 text-gray-100">Total: { productImage.price }</h3>
+                          
+                            <h3 className="mb-4 font-bold text-gray-100">Total: <span class="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } $</h3>
                             <motion.a
                               variants={slideInFromLeft(1)}
                               className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
@@ -143,7 +145,7 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video> */}
           {/* <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
-          <iframe className="mx-6" width="560" height="300" src="https://www.youtube.com/embed/6053wFaAZzc?si=ImnMh604yuLjH8dl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          
 
 
           <div
@@ -153,7 +155,8 @@ const ProjectCard = () => {
                 modelImageUrl: "full product.png",
                 modelTitle: "Full Package",
                 modelToggle: "img",
-                price: 299.99
+                price: 299.99,
+                disPrice: 332
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -179,7 +182,8 @@ const ProjectCard = () => {
                 modelImageUrl: "motherbox.jpeg",
                 modelTitle: "Mother Box",
                 modelToggle: "img",
-                price: 299.99
+                price: 100,
+                disPrice: 6
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -201,7 +205,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
                 modelToggle: "img",
-                price: 299.99
+                price: 67.99,
+                disPrice: 999
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -223,7 +228,8 @@ const ProjectCard = () => {
                 modelImageUrl: "WEB CAM iso.JPG",
                 modelTitle: "Web cam",
                 modelToggle: "img",
-                price: 299.99
+                price: 299.87,
+                disPrice: 356
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -246,7 +252,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Vibrator.png",
                 modelTitle: "Vibrator",
                 modelToggle: "img",
-                price: 299.99
+                price: 292.99,
+                disPrice: 345
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -268,7 +275,8 @@ const ProjectCard = () => {
                 modelImageUrl: "display.jpg",
                 modelTitle: "Display",
                 modelToggle: "img",
-                price: 299.99
+                price: 399.99,
+                disPrice: 30
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -290,7 +298,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Radar Sensor iso.JPG",
                 modelTitle: "rader sensor",
                 modelToggle: "img",
-                price: 299.99
+                price: 29.99,
+                disPrice: 90
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -310,9 +319,10 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelImageUrl: "Speedometer iso copy.JPG",
-                modelTitle: "Speedometer",
+                modelTitle: "Tacho meter",
                 modelToggle: "img",
-                price: 299.99
+                price: 299.99,
+                disPrice: 330
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -642,6 +652,15 @@ const ProjectCard = () => {
             ></model-viewer>
           </div>
         </div>
+      </div>
+      <motion.div
+        variants={slideInFromLeft(0.5)}
+        className="text-[25px] text-white font-medium mt-[10px] text-center mb-[15px]"
+      >
+        Deep view to the features
+      </motion.div>
+      <div className="flex justify-center align-center w-full">
+        <iframe className="mx-6" width="560" height="300" src="https://www.youtube.com/embed/6053wFaAZzc?si=ImnMh604yuLjH8dl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </>
   );
