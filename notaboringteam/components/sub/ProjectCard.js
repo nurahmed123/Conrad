@@ -51,7 +51,7 @@ const ProjectCard = () => {
           {(onClose) => (
             <>
               <h1 className="text-gray-200 text-xl">
-                {productImage.modelTitle} ( <span className="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } )
+                {productImage.modelTitle} ( <span className="line-through font-normal tracking-tight text-red-500">${ productImage.disPrice }</span> { productImage.price } )
               </h1>
 
               {productImage.modelToggle === "img" ?
