@@ -51,7 +51,7 @@ const ProjectCard = () => {
           {(onClose) => (
             <>
               <h1 className="text-gray-200 text-xl">
-                {productImage.modelTitle}
+                {productImage.modelTitle} ( <span className="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } )
               </h1>
 
               {productImage.modelToggle === "img" ?
@@ -182,8 +182,8 @@ const ProjectCard = () => {
                 modelImageUrl: "motherbox.jpeg",
                 modelTitle: "Mother Box",
                 modelToggle: "img",
-                price: 100,
-                disPrice: 6
+                price: 99,
+                disPrice: 110
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -205,8 +205,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Automotive Air bag sensor iso.JPG",
                 modelTitle: "Automotive Air bag sensor",
                 modelToggle: "img",
-                price: 67.99,
-                disPrice: 999
+                price: 20,
+                disPrice: 35
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -228,8 +228,8 @@ const ProjectCard = () => {
                 modelImageUrl: "WEB CAM iso.JPG",
                 modelTitle: "Web cam",
                 modelToggle: "img",
-                price: 299.87,
-                disPrice: 356
+                price: 40,
+                disPrice: 45
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -252,8 +252,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Vibrator.png",
                 modelTitle: "Vibrator",
                 modelToggle: "img",
-                price: 292.99,
-                disPrice: 345
+                price: 15,
+                disPrice: 20
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -275,8 +275,8 @@ const ProjectCard = () => {
                 modelImageUrl: "display.jpg",
                 modelTitle: "Display",
                 modelToggle: "img",
-                price: 399.99,
-                disPrice: 30
+                price: 50,
+                disPrice: 55
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -298,8 +298,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Radar Sensor iso.JPG",
                 modelTitle: "rader sensor",
                 modelToggle: "img",
-                price: 29.99,
-                disPrice: 90
+                price: 25,
+                disPrice: 30
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -321,8 +321,8 @@ const ProjectCard = () => {
                 modelImageUrl: "Speedometer iso copy.JPG",
                 modelTitle: "Tacho meter",
                 modelToggle: "img",
-                price: 299.99,
-                disPrice: 330
+                price: 15,
+                disPrice: 20
               })
             }
             onMouseMove={() => setShowBuy(false)}
