@@ -10,7 +10,7 @@ import {
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
-const  HeroContent = () => {
+const HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
@@ -24,7 +24,7 @@ const  HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Lets make our earth green
+            Let's make our road safe.
           </h1>
         </motion.div>
 
@@ -37,7 +37,7 @@ const  HeroContent = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               road safety beast{" "}
-            </span> 
+            </span>
             a complete solution of road accident
           </span>
         </motion.div>
