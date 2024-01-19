@@ -156,7 +156,7 @@ const ProjectCard = () => {
                 modelTitle: "Full Package",
                 modelToggle: "img",
                 price: 299.99,
-                disPrice: 332
+                disPrice: 350
               })
             }
             onMouseMove={() => setShowBuy(false)}
@@ -542,7 +542,7 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelURL: "pocketSensor.glb",
-                modelTitle: "pocketSensor",
+                modelTitle: "Vibrator",
               })
             }
           >
@@ -635,7 +635,7 @@ const ProjectCard = () => {
             onMouseEnter={() =>
               setProductImage({
                 modelURL: "speedometer.glb",
-                modelTitle: "Speedometer",
+                modelTitle: "Techo meter",
               })
             }
           >
