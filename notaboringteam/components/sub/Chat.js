@@ -9,7 +9,7 @@ const Chat = () => {
                 theme="dark"
                 orientation="left"
                 headline="Chat with our AI"
-                className="z-[20] bg-slate-300 fixed"
+                className="px-4 z-[20] fixed"
             ></ab-chat>
             <Script
                 async
