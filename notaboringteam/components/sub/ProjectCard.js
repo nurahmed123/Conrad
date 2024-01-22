@@ -30,6 +30,19 @@ const ProjectCard = () => {
 
   return (
     <>
+      <ab-chat
+        chatbotID="ppFCSpmhM9JP_G951InN0"
+        theme="dark"
+        orientation="left"
+        headline="Chat with our AI"
+        className="z-[20] bg-slate-300"
+      ></ab-chat>
+      <Script
+        async
+        type="text/javascript"
+        src="https://client.aidbase.ai/chat-widget.ab.js"
+      />
+
       <Script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
@@ -37,7 +50,7 @@ const ProjectCard = () => {
           console.log("Script has loaded");
         }}
       />
-
+      
       <Modal
         backdrop="opaque"
         isOpen={isOpen}
@@ -51,7 +64,7 @@ const ProjectCard = () => {
           {(onClose) => (
             <>
               <h1 className="text-gray-200 text-xl">
-                {productImage.modelTitle} {productImage.price!=null? <span className="line-through font-normal tracking-tight text-red-500">${ productImage.disPrice }</span>:""  } {productImage.price}
+                {productImage.modelTitle} {productImage.price != null ? <span className="line-through font-normal tracking-tight text-red-500">${productImage.disPrice}</span> : ""} {productImage.price}
               </h1>
 
               {productImage.modelToggle === "img" ?
@@ -90,8 +103,8 @@ const ProjectCard = () => {
                             </div>
                           </div>
                           <div className="mt-8">
-                          
-                            <h3 className="mb-4 font-bold text-gray-100">Total: <span className="line-through font-normal tracking-tight text-gray-100">${ productImage.disPrice }</span> { productImage.price } $</h3>
+
+                            <h3 className="mb-4 font-bold text-gray-100">Total: <span className="line-through font-normal tracking-tight text-gray-100">${productImage.disPrice}</span> {productImage.price} $</h3>
                             <motion.a
                               variants={slideInFromLeft(1)}
                               className="py-2 px-6 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
@@ -145,7 +158,7 @@ const ProjectCard = () => {
             <source src="/ProductVideo.mov" />
           </video> */}
           {/* <iframe className="mx-6"  src="https://www.youtube-nocookie.com/embed/s2FC9SdrUR4?si=aGl0iN4qkosK_CuA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
-          
+
 
 
           <div
