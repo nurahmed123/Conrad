@@ -1,5 +1,6 @@
 import React from "react";
 import HeroContent from "../sub/HeroContent";
+import Chat from "@/components/sub/Chat"
 
 const Hero = () => {
   return (
@@ -13,6 +14,7 @@ const Hero = () => {
         <source src="/blackhole.webm" type="video/webm" />
       </video>
       <HeroContent />
+      <Chat/>
     </div>
   );
 };
