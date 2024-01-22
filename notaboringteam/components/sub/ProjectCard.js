@@ -30,19 +30,6 @@ const ProjectCard = () => {
 
   return (
     <>
-      <ab-chat
-        chatbotID="ppFCSpmhM9JP_G951InN0"
-        theme="dark"
-        orientation="left"
-        headline="Chat with our AI"
-        className="z-[20] bg-slate-300"
-      ></ab-chat>
-      <Script
-        async
-        type="text/javascript"
-        src="https://client.aidbase.ai/chat-widget.ab.js"
-      />
-
       <Script
         type="module"
         src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
@@ -50,7 +37,6 @@ const ProjectCard = () => {
           console.log("Script has loaded");
         }}
       />
-      
       <Modal
         backdrop="opaque"
         isOpen={isOpen}
