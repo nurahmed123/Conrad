@@ -17,7 +17,7 @@ const Chat = () => {
                 ></ab-chat>
             </div> */}
             <div class="relative h-32 w-32">
-                <div class="absolute bottom-0 right-0 h-16 w-16">
+                <div class="bottom-0 h-16 w-16 fixed left-0 right-0">
                     <ab-chat
                         chatbotID="ppFCSpmhM9JP_G951InN0"
                         theme="dark"
