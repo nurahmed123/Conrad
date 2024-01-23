@@ -25,7 +25,6 @@ export default function RootLayout({
       >
         <StarsCanvas />
         <Navbar />
-        {/* <ResNav/> */}
         {children}
         <Footer />2
       </body>
