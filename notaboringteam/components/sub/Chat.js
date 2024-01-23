@@ -21,6 +21,7 @@ const Chat = () => {
                     <ab-chat
                         chatbotID="ppFCSpmhM9JP_G951InN0"
                         orientation="right"
+                        color="#020014"
                         headline="Chat with our AI"
                         description="Ask any question and our AI will answer!"
                         initialMessage="How can I help you today?"
