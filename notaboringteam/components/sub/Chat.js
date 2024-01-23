@@ -17,10 +17,9 @@ const Chat = () => {
                 ></ab-chat>
             </div> */}
             <div class="relative h-32 w-32 z-[20]">
-                <div class="bottom-0 h-16 w-16 relative z-[20]">
+                <div class="bottom-0 h-16 w-16 relative left-2  z-[20]">
                     <ab-chat
                         chatbotID="ppFCSpmhM9JP_G951InN0"
-                        theme="dark"
                         orientation="right"
                         headline="Chat with our AI"
                         description="Ask any question and our AI will answer!"
