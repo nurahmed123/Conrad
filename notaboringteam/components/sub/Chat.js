@@ -10,16 +10,10 @@ const Chat = () => {
                     className="px-4 z-[20] fixed"
                     theme="dark"
                     orientation="right"
-                    logoURL="https://cdn.some-page.com/logo.png"
                     headline="Chat with our AI"
                     description="Ask any question and our AI will answer!"
                     initialMessage="How can I help you today?"
                     placeholder="Type your message here..."
-                    isOpen="false"
-                    hideButton="true"
-                    maxHeight="48rem"
-                    minHeight="32rem"
-                    profileImageURL="https://cdn.some-page.com/profile-sm.png"
                 ></ab-chat>
                 <Script
                     async
