@@ -132,7 +132,7 @@ export const Skill_data = [
       height: 40,
     },
     {
-      skill_name: "Graphql",
+      skill_name: "Aos",
       Image: "/AOS.png",
       width: 80,
       height: 80,
