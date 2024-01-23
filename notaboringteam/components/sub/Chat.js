@@ -16,8 +16,8 @@ const Chat = () => {
                     placeholder="Type your message here..."
                 ></ab-chat>
             </div> */}
-            <div class="relative h-32 w-32 z-[20]">
-                <div class="bottom-0 h-16 w-16 relative left-2  z-[20]">
+            <div class="relative h-32 z-[20] ">
+                <div class="bottom-0 h-16 relative left-2  z-[20]">
                     <ab-chat
                         chatbotID="ppFCSpmhM9JP_G951InN0"
                         orientation="right"
