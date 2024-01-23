@@ -133,7 +133,7 @@ export const Skill_data = [
     },
     {
       skill_name: "Aos",
-      Image: "/AOS.png",
+      Image: "/aos.png",
       width: 80,
       height: 80,
     },
