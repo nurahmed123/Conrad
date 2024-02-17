@@ -118,7 +118,7 @@ const teamDetails = () => {
                 </div>
                 <div className="flex">
                   <span className="px-2">Phone:</span>
-                  <a href="tel:+8801774254696">+880 1774254696</a>
+                  <a href="tel:+8801761776336">+880 1761776336</a>
                 </div>
                 <div className="flex">
                   <span className="px-2">Email:</span>
