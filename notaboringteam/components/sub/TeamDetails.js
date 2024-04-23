@@ -179,12 +179,24 @@ const teamDetails = () => {
                   </Link>
                   <Link
                     target="_bank"
-                    href="www.https://github.com/nurahmed123"
+                    href="https://github.com/nurahmed123"
                   >
                     <Image
                       className="mr-4"
                       alt="github"
                       src={"/github.png"}
+                      width={24}
+                      height={24}
+                    />
+                  </Link>
+                  <Link
+                    target="_bank"
+                    href="https://www.linkedin.com/in/06nurahmed/"
+                  >
+                    <Image
+                      className="mr-4 text-white"
+                      alt="linkedin"
+                      src={"/linkedin.png"}
                       width={24}
                       height={24}
                     />
