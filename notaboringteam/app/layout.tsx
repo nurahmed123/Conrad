@@ -27,7 +27,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />2 */}
-        <h1 className="text-white text-9xl justify-center ">Fuck the Twashin Ilahi</h1>
+        <h1 className="text-white text-9xl justify-center ">F****UC*****K TWASHIN THE B***IT(H***</h1>
       </body>
     </html>
   );
