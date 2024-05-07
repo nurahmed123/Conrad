@@ -23,10 +23,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
-        <StarsCanvas />
+        {/* <StarsCanvas />
         <Navbar />
         {children}
-        <Footer />2
+        <Footer />2 */}
+        <h1 className="text-white text-9xl justify-center ">Fuck the Twashin Ilahi</h1>
       </body>
     </html>
   );
