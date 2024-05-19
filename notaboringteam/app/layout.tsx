@@ -23,11 +23,11 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#030014] overflow-y-scroll overflow-x-hidden`}
       >
-        {/* <StarsCanvas />
+        <StarsCanvas />
         <Navbar />
         {children}
-        <Footer />2 */}
-        <h1 className="text-white text-9xl justify-center ">F****UC*****K TWASHIN THE B***IT(H***</h1>
+        <Footer />2
+        {/* <h1 className="text-white text-9xl justify-center ">F****UC*****K TWASHIN THE B***IT(H***</h1> */}
       </body>
     </html>
   );
