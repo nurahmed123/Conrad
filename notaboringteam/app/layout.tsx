@@ -5,6 +5,7 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import ResNav from "@/components/main/ResNav";
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,15 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />2
+
         {/* <h1 className="text-white text-9xl justify-center ">F****UC*****K TWASHIN THE B***IT(H***</h1> */}
+
+        <Script
+          async
+          src="//wwr.hlinit.com/?tag=4de12531"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
